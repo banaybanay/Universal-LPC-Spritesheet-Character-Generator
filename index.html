@@ -16,34 +16,29 @@
 </head>
 <body>
 	<br>
-	<div id="previewAnimationsBox">
-		Preview
-		<select id="whichAnim">
-			<option value="spellcast" data-row="0" data-num="4" data-cycle="7">Spellcast</option>
-			<option value="thrust" data-row="4" data-num="4" data-cycle="8">Thrust</option>
-			<option value="walk" selected data-row="8" data-num="4" data-cycle="9">Walk</option>
-			<option value="slash" data-row="12" data-num="4" data-cycle="6">Slash</option>
-			<option value="shoot" data-row="16" data-num="4" data-cycle="13">Shoot</option>
-			<option value="hurt" data-row="20" data-num="1" data-cycle="6">Hurt</option>
-			<option value="smash" data-row="12" data-num="4" data-cycle="4">Smash</option>
-		</select>
-		<canvas id="previewAnimations" width="1024" height="192"></canvas>
-	</div>
-	<p>
-		<a id="saveAsPNG"><input type="button" value="Save Result As PNG"></a>
-		<input type="button" id="collapse" value="Collapse All">
-		<button type="button" id="resetAll">Reset all</button>
-	</p>
-	<p>
-		<p>Choose a local file to draw in this sheet with a custom z-position</p>
-		<input type="file" id="previewFile"><br>
-		<input id="ZPOS" type="text" name="ZPOS">z-position<br>
-	</p>
-	<p>
-		<p>Define custom sequence of frames, 0-based. EG: '3, 5, 3, 0'. Select a preview to effectuate.</p>
-		<input id="customFrames" type="text" name="customFrames">custom frames<br>
-	</p>
+	
+	
 	<form id="customizeChar">
+		<header>
+		    <h1>Character Generator</h1>
+		    <p class="subtitle">Create a character sprite sheet for your game using 100% open art.</p>
+		    <h2>Based on <a href="https://github.com/jrconway3/Universal-LPC-spritesheet">Universal LPC Sprite Sheet</a></h2>
+		    <h3>All art is dual licensed: GPL3 and CC-BY-SA3</h3>
+		    </header>
+		<p>
+			<a id="saveAsPNG"><input type="button" value="Save Result As PNG"></a>
+			<input type="button" id="collapse" value="Collapse All">
+			<button type="button" id="resetAll">Reset all</button>
+		</p>
+		<p>
+			<p>Choose a local file to draw in this sheet with a custom z-position</p>
+			<input type="file" id="previewFile"><br>
+			<input id="ZPOS" type="text" name="ZPOS">z-position<br>
+		</p>
+		<p>
+			<p>Define custom sequence of frames, 0-based. EG: '3, 5, 3, 0'. Select a preview to effectuate.</p>
+			<input id="customFrames" type="text" name="customFrames">custom frames<br>
+		</p>
 		<section id="chooser">
 			<ul>
 				<!-- Body types -->
@@ -351,6 +346,20 @@
 		</section>
 	</form>
 	<section id="preview">
+		<div id="previewAnimationsBox">
+		Preview
+		<select id="whichAnim">
+			<option value="spellcast" data-row="0" data-num="4" data-cycle="7">Spellcast</option>
+			<option value="thrust" data-row="4" data-num="4" data-cycle="8">Thrust</option>
+			<option value="walk" selected data-row="8" data-num="4" data-cycle="9">Walk</option>
+			<option value="slash" data-row="12" data-num="4" data-cycle="6">Slash</option>
+			<option value="shoot" data-row="16" data-num="4" data-cycle="13">Shoot</option>
+			<option value="hurt" data-row="20" data-num="1" data-cycle="6">Hurt</option>
+			<option value="smash" data-row="12" data-num="4" data-cycle="4">Smash</option>
+		</select>
+		<canvas id="previewAnimations" width="1024" height="192"></canvas>
+	</div>
+		
 		<p class="instr">The complete resulting sprite sheet for your character:</p>
 		<canvas id="spritesheet" width="832" height="1344">HTML5 Browser required.</canvas>
 	</section>
