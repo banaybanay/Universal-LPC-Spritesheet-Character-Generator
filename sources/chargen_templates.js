@@ -62,7 +62,7 @@ function generateListHTML(json, checkFirst) {
       sexIdx += 1;
     }
     listItemsHTML += templateHTML
-//       .replace("[ID_FOR]", itemIdFor)
+      .replace("[ID_FOR]", itemIdFor)
       .replace("[TYPE_NAME]", typeName)
       .replace("[NAME]", itemName)
       .replace("[DATA_FILE]", dataFiles);
