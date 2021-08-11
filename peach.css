@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Patrick Hand";
+  src: url("font/PatrickHand-Regular.ttf") format("truetype");
+}
+body {
+  font-family: 'Patrick Hand', sans-serif;
+  background:antiquewhite;
+  color:#947245;
+  text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+}
+header {
+    /* width: 100%; */
+    /* display: block; */
+    /* text-align: center; */
+    line-height: 1;
+    padding: 20px;
+    width: 300px;
+}
+h1 {
+  font-size: 60px;
+}
+.subtitle,h2, h3 {
+  padding: 0;
+  opacity: .7;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #947245;
+}
+#previewAnimationsBox {
+    width: 256px;
+    height: auto;
+    margin: 50px 0 -130px 0;
+    display: block;
+    text-align: center;
+    position: relative;
+    top:auto;
+    right: 0;
+    left:auto;
+}
+#chooser {
+    width: 300px;
+    min-width: 0;
+    padding-left: 20px;
+    float: left;
+    font-size: 12px;
+}
+#chooser li.hasPreview {
+  padding: 5px;
+  min-width:60px;
+
+}
+ul>li li{
+  cursor: auto;
+
+}
+#chooser>ul>li>ul>li {
+  padding-left: 0;
+  text-indent: 0;
+  text-align:center;
+  /* display: inline-block; */
+}
+#chooser>ul {
+  height: auto!important;
+  border-top: 1px solid #c8b193;
+}
+#chooser>ul>li {
+  border: 1px solid #c8b193;
+  padding: 5px;
+  margin-top: -1px; 
+  font-size: 16px;
+  text-transform: uppercase;
+}
+ul>li li label {
+  cursor: pointer;
+  border: 1px solid #947245;
+  display: inline-block;
+  border-radius: 5px;
+  margin:5px 0;
+  padding: 0 5px;
+}
+ul>li li input:checked + label {
+    background: #947245;
+    color: #fff;
+}
+ul>li li input[type="radio"]{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+#chooser>ul>li>.expanded:after, #chooser>ul>li>ul>li>.expanded:after {
+  content: '-';
+  float:right;
+}
+#chooser ul.hasPreview {
+    text-align: center;
+    
+}
+#chooser>ul>li>.condensed:after, #chooser>ul>li>ul>li>.condensed:after {
+  content: '+';
+  float:right;
+}
+#customizeChar {
+  float: left;
+  padding-right: 25px;
+  border-right: 1px solid #c8b193;
+  box-shadow: inset 5px 0 13px 0px #c8b193;
+  border-radius: 10px;
+}
+hr{
+  border-top: 1px solid #c8b193;
+  opacity: .7;
+}
+ul>li li span {
+    font-weight: bold;
+    max-width: 80%;
+}
+ul>li li span label {
+  border: none;
+  max-width: 80%;
+}
