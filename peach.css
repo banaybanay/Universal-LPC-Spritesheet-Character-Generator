@@ -4,8 +4,8 @@
 }
 body {
   font-family: 'Patrick Hand', sans-serif;
-  background:antiquewhite;
-  color:#947245;
+  background:#fafafa;
+  color:#607d8b;
   text-transform: uppercase;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -23,29 +23,40 @@ h1 {
 }
 .subtitle,h2, h3 {
   padding: 0;
-  opacity: .7;
   font-size: 14px;
+  z-index: 1;
 }
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #947245;
+  color: #607d8b;
   cursor: pointer;
 }
 #previewAnimationsBox {
-    width: 256px;
-    height: auto;
-    margin: 50px 0 -130px 0;
+    width: 866px;
+    height: 260px;
+    margin: 20px;
+    padding: 5px 0;
     display: block;
-    text-align: center;
-    position: relative;
-    top:auto;
-    right: 0;
-    left:auto;
+    font-weight: bold;
+    position: sticky;
+    top: 30px;
+    right: auto;
+    left: auto;
+    background: #fafafa;
+    float: left;
+  /*border-radius: 15px;*/
+       border-top:  1px solid #607d8b;
+  border-bottom:  1px solid #607d8b;
+
+}
+#preview {
+  float: left;
+  margin-left: 20px;
 }
 .advanced {
   line-height: 1;
-  border: 1px solid #947245;
+  border: 1px solid #607d8b;
 }
 #chooser {
     width: 100%;
@@ -72,7 +83,7 @@ ul>li li{
 #chooser>ul {
   height: auto!important;}
 #chooser>ul>li {
-  border: 1px solid #c8b193;
+  border: 1px solid #607d8b;
   padding: 5px;
   margin-top: -1px; 
   font-size: 16px;
@@ -80,14 +91,14 @@ ul>li li{
 }
 ul>li li label {
   /*cursor: pointer;*/
-  border: 1px solid #947245;
+  border: 1px solid #607d8b;
   display: inline-block;
   border-radius: 5px;
   margin:5px 0;
   padding: 0 5px;
 }
 ul>li li input:checked + label {
-    background: #947245;
+    background: #607d8b;
     color: #fff;
 }
 ul>li li input[type="radio"]{
@@ -111,14 +122,12 @@ ul>li li input[type="radio"]{
 #customizeChar {
   float: left;
   padding: 25px;
-  border-right: 1px solid #c8b193;
-  box-shadow: inset 5px 0 13px 0px #c8b193;
+  /*box-shadow: inset 5px 0 13px 0px #607d8b;*/
   border-radius: 10px;
   max-width: 400px;
 }
 hr{
-  border-top: 1px solid #c8b193;
-  opacity: .7;
+  border-top: 1px solid #607d8b;
 }
 li span {
   cursor: pointer;
@@ -133,7 +142,7 @@ ul>li li span label {
 }
 input[type="file"], input[type="text"] {
   cursor: pointer;
-  border: 1px solid #947245;
+  border: 1px solid #607d8b;
   display: inline-block;
   border-radius: 5px;
   margin:5px 0;
@@ -141,7 +150,7 @@ input[type="file"], input[type="text"] {
   width: 220px;
   background: transparent;
   outline: none;
-  color: #947245;
+  color: #607d8b;
   font-family: 'Patrick Hand';
   font-size: 16px;
 }
@@ -158,10 +167,47 @@ button,
   outline: none;
   padding: 3px 10px;
   border: none;
-  background: #947245;  
+  background: #607d8b;  
   border-radius: 5px;
   display: inline-block;
 }
 .options a{
-  margin:  0 10px;
+  margin:  0 2px;
+  padding: 2px 7px;
+  /*border: 1px solid #607d8b;*/
+  border-radius: 25px;
+  /*box-shadow: 5px 0 5px 0px #607d8b;*/
+  display: inline-block;
+  z-index: 9;
+}
+.options a:hover {
+  background: #607d8b;
+  color: #fff;
+}
+.options a:active {
+  transform: translateY(3px);
+}
+.options {
+  position: sticky;
+  top: 30px;
+  padding: 15px 0;
+  background: #fafafa;
+  border-top:  1px solid #607d8b;
+  border-bottom:  1px solid #607d8b;
+}
+span.arrow {
+  position: absolute;
+  top: 0;
+  left: -46px;
+  font-size: 43px;
+}
+#creditsText {
+  background: transparent;
+  border:  1px solid #607d8b;
+  max-width: 80%;
+  min-height: 200px;
+  padding: 20px;
+  margin: 30px;
+  font-family: 'Patrick Hand', sans-serif;
+  color:#607d8b;
 }

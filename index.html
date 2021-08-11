@@ -20,33 +20,35 @@
 <body>
 	<br>
 	
-	
 	<form id="customizeChar">
 		<header>
 		    <h1>Character Generator</h1>
-		    <!-- <p class="subtitle">Create a character sprite sheet for your game using 100% open art.</p>
-		    <h2>Based on <a href="https://github.com/jrconway3/Universal-LPC-spritesheet">Universal LPC Sprite Sheet</a></h2>
-		    <h3>All art is dual licensed: GPL3 and CC-BY-SA3</h3> -->
+		    <!-- <p class="subtitle">Create a character sprite sheet for your game using 100% open art.</p> -->
+		    <h2>Based on <a href="https://github.com/jrconway3/Universal-LPC-spritesheet" target="_blank">Universal LPC Sprite Sheet</a> | 100% open art </h2>
+		    <!-- <h3>All art is dual licensed: GPL3 and CC-BY-SA3</h3> -->
 		</header>
+		<br>
 		<p class="options">
 			<a id="saveAsPNG"><i class="fas fa-save"></i> save as png</a>
 			<!-- <input type="button" id="collapse" value="Collapse All"> -->
 			<a id="collapse"><i class="fas fa-minus"></i> collapse all</a>
-			<a id="resetAll"><i class="fas fa-undo"></i> Reset all</a>
+			<a id="resetAll" onclick="return confirm('Confirm reset?');"><i class="fas fa-undo"></i> Reset all</a>
 		</p>
-		<hr>
+		<br><br>
 		<p>
-			<p class="subtitle">Advanced Options:</p>
-			Upload file: <input type="file" id="previewFile"> <br>
-			z-position: <input id="ZPOS" type="text" name="ZPOS"> <br>
-			custom frames: <input id="customFrames" type="text" name="customFrames">
+			<p class="subtitle"><i class="fas fa-cog"></i> Advanced Options: Custom File</p>
+			<b>Upload file:</b> <input type="file" id="previewFile"> <br>
+			<b>z-position: </b><input id="ZPOS" type="text" name="ZPOS"> <br>
+			<b>custom frames:</b> <input id="customFrames" type="text" name="customFrames">
 			<p class="subtitle">Define custom sequence of frames, 0-based. EG: '3, 5, 3, 0'. Select a preview to effectuate.</p>
 		</p>
+		<br><br>
 		<!-- <hr> -->
 		<section id="chooser">
 			<ul>
 				<!-- Body types -->
-				<span class="condensed">Body type</span>
+				<span class="condensed"> ps. some sprites are not available for certain body types <br> 
+					pps. no default body for child, pregnant, & mascular body types. don't worry if there's no preview, it's not a bug. just go to the "body" section to choose</span>
 				<li>
 					<input type="radio" id="sex-male" name="sex" checked>
 					<label for="sex-male">Male</label>
@@ -349,34 +351,40 @@
 			</ul>
 		</section>
 	</form>
+	<div id="previewAnimationsBox">
+			<i class="fas fa-play"></i> Preview 
+			<select id="whichAnim">
+				<option value="spellcast" data-row="0" data-num="4" data-cycle="7">Spellcast</option>
+				<option value="thrust" data-row="4" data-num="4" data-cycle="8">Thrust</option>
+				<option value="walk" selected data-row="8" data-num="4" data-cycle="9">Walk</option>
+				<option value="slash" data-row="12" data-num="4" data-cycle="6">Slash</option>
+				<option value="shoot" data-row="16" data-num="4" data-cycle="13">Shoot</option>
+				<option value="hurt" data-row="20" data-num="1" data-cycle="6">Hurt</option>
+				<option value="smash" data-row="12" data-num="4" data-cycle="4">Smash</option>
+			</select>
+			<canvas id="previewAnimations" width="1024" height="192"></canvas>
+		</div><br>
 	<section id="preview">
-		<div id="previewAnimationsBox">
-		Preview
-		<select id="whichAnim">
-			<option value="spellcast" data-row="0" data-num="4" data-cycle="7">Spellcast</option>
-			<option value="thrust" data-row="4" data-num="4" data-cycle="8">Thrust</option>
-			<option value="walk" selected data-row="8" data-num="4" data-cycle="9">Walk</option>
-			<option value="slash" data-row="12" data-num="4" data-cycle="6">Slash</option>
-			<option value="shoot" data-row="16" data-num="4" data-cycle="13">Shoot</option>
-			<option value="hurt" data-row="20" data-num="1" data-cycle="6">Hurt</option>
-			<option value="smash" data-row="12" data-num="4" data-cycle="4">Smash</option>
-		</select>
-		<canvas id="previewAnimations" width="1024" height="192"></canvas>
-	</div>
 		
-		<p class="instr">The complete resulting sprite sheet for your character:</p>
+		
+		<p class="instr">Here's your complete sprite sheet! <i class="fas fa-heart"></i></p>
 		<canvas id="spritesheet" width="832" height="1344">HTML5 Browser required.</canvas>
 	</section>
-	<p>
+
+	<p> <br>
 		<textarea id="creditsText" rows="20" cols="300" readonly style="font-size: 10pt">Placehholder</textarea>
 	</p>
-	<p>
+	<p style="margin: 30px;">
 		<button type="button" id="generateSheetCredits">Credits for this sheet</button>
 		<button type="button" id="generateAllCredits">Credits for all sprites</button>
-		<p>Please respect the licenses.<br>For missing credits links, please look them up and process them properly. All spritesheets are submitted to:</p>
-		<a href="https://opengameart.org">OpenGameArt</a>
+
+		<p style="margin: 30px;">Please respect the licenses.<br>For missing credits links, please look them up and process them properly. All spritesheets are submitted to:</p>
+		<a style="margin: 30px;"  target="_blank"href="https://opengameart.org">OpenGameArt</a>
 		<br>
-		<a href="https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator/blob/master/README.md">Crediting instructions</a>
+		<a style="margin: 30px;"  target="_blank"href="https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator/blob/master/README.md">Crediting instructions</a> <br> <br>
+		<p style="margin: 30px;"> This website is simply a UI enhanced version of <a target="_blank" href="https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/">sanderfrenken's version of Universal-LPC-Spritesheet-Character-Generator</a>.<br>
+		Also check: <a target="_blank" href="https://github.com/Gaurav0/Universal-LPC-Spritesheet-Character-Generator">sir Gaurav0's Original Version</a>
+		</p>
 	</p>
 </body>
 </html>
