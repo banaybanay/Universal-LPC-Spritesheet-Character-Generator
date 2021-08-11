@@ -13,6 +13,9 @@
 	<script type="text/javascript" src="sources/chargen_utils.js"></script>
 	<script type="text/javascript" src="sources/chargen_templates.js"></script>
 	<script type="text/javascript" src="sources/chargen.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
 </head>
 <body>
 	<br>
@@ -21,24 +24,25 @@
 	<form id="customizeChar">
 		<header>
 		    <h1>Character Generator</h1>
-		    <p class="subtitle">Create a character sprite sheet for your game using 100% open art.</p>
+		    <!-- <p class="subtitle">Create a character sprite sheet for your game using 100% open art.</p>
 		    <h2>Based on <a href="https://github.com/jrconway3/Universal-LPC-spritesheet">Universal LPC Sprite Sheet</a></h2>
-		    <h3>All art is dual licensed: GPL3 and CC-BY-SA3</h3>
-		    </header>
-		<p>
-			<a id="saveAsPNG"><input type="button" value="Save Result As PNG"></a>
-			<input type="button" id="collapse" value="Collapse All">
-			<button type="button" id="resetAll">Reset all</button>
+		    <h3>All art is dual licensed: GPL3 and CC-BY-SA3</h3> -->
+		</header>
+		<p class="options">
+			<a id="saveAsPNG"><i class="fas fa-save"></i> save as png</a>
+			<!-- <input type="button" id="collapse" value="Collapse All"> -->
+			<a id="collapse"><i class="fas fa-minus"></i> collapse all</a>
+			<a id="resetAll"><i class="fas fa-undo"></i> Reset all</a>
 		</p>
+		<hr>
 		<p>
-			<p>Choose a local file to draw in this sheet with a custom z-position</p>
-			<input type="file" id="previewFile"><br>
-			<input id="ZPOS" type="text" name="ZPOS">z-position<br>
+			<p class="subtitle">Advanced Options:</p>
+			Upload file: <input type="file" id="previewFile"> <br>
+			z-position: <input id="ZPOS" type="text" name="ZPOS"> <br>
+			custom frames: <input id="customFrames" type="text" name="customFrames">
+			<p class="subtitle">Define custom sequence of frames, 0-based. EG: '3, 5, 3, 0'. Select a preview to effectuate.</p>
 		</p>
-		<p>
-			<p>Define custom sequence of frames, 0-based. EG: '3, 5, 3, 0'. Select a preview to effectuate.</p>
-			<input id="customFrames" type="text" name="customFrames">custom frames<br>
-		</p>
+		<!-- <hr> -->
 		<section id="chooser">
 			<ul>
 				<!-- Body types -->
