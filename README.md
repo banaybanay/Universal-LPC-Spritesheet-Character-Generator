@@ -1,4 +1,11 @@
 Universal LPC Spritesheet Character Generator
+
+View [here](https://lovechan404.github.io/Universal-LPC-Spritesheet-Character-Generator/).
+
+This is UI enhanced version of [sanderfrenken's version of Universal-LPC-Spritesheet-Character-Generator](https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/).
+
+-------------------------------------------------------------------------------
+Universal LPC Spritesheet Character Generator
 =============================================
 
 Based on [Universal LPC Spritesheet](https://github.com/jrconway3/Universal-LPC-spritesheet).
